@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+body {
+    background-color: #fff;
+    height: 100vh;
+}
+#contenair-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 1600px;
+    height: 100vh;
+    margin: auto;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #000000;
+    background-color: #fff;
+    overflow: hidden;
+    margin: 3rem;
+}
+
+
+/* TITRE */
+
+.title-card {
+    position: relative;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+}
+.title-card::before {
+    position: absolute;
+    content: "nike irus";
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.342);
+    top: 12px;
+    left: 0px;
+    z-index: -1;
+}
+
+/* ICONE SOCIAL */
+
+.social-card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: -10%;
+    padding: 0.3rem;
+    transition: 0.5s ease;
+}
+.social-card i {
+    color: rgba(0, 0, 0, 0.400);
+    padding: 5px;
+}
+
+
+/* IMAGE */
+
+.img-card {
+    position: relative;
+    max-width: 300px;
+    max-height: 300px;
+    transform: translatex(-20px);
+}
+.img-card:after {
+    position: absolute;
+    content: "";
+    top: -160%;
+    left: -30%;
+    width: 490px;
+    height: 490px;
+    background-color: rgb(128, 128, 128);
+    border: 10px solid yellow;
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.5s ease-out;
+}
+.img-card img {
+    position: relative;
+    width: 100%;
+    left: 40px;
+    transition: 0.5s ease-out;
+
+}
+
+/* CONTENT */
+
+.content-card {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.txt-card {
+    padding: 1rem;
+}
+.content-card h3 {
+    padding: 1rem 0;  
+}
+.content-card p {
+    color: #7c7c7c;
+    font-style: italic;
+}
+
+/* COLOR */
+
+.color-card {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+}
+.color-card button {
+    width: 20px;
+    height: 20px;
+    background-color: crimson;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 0.2rem;
+}
+.color-card button:nth-child(2) {
+    background-color: blue;
+}
+.color-card button:nth-child(3) {
+    background-color: #000;
+}
+.color-card button:nth-child(4) {
+    background-color: yellow;
+}
+
+
+/* PRICE */
+
+.price-card {
+    padding: 0 1rem 0.5rem 1rem;
+    height: 0;
+    transition: 0.5s;
+}
+.price-card p {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.price-card a {
+    position: relative;
+    text-transform: uppercase;
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.5rem 4rem;
+    background-color: #fff;
+    border: 2px solid rgb(75, 75, 87);
+    border-radius: 15px 0 0 15px; 
+    z-index: 3;
+    transition: 0.5s ease;
+}
+.price-card i {
+    position: relative;
+    border: 2px solid rgb(75, 75, 87);
+    border-radius: 50%;
+    padding: 0.3rem;
+    left: 0; 
+    background-color: #fff;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.price-card small {
+    font-size: 1rem;
+}
+
+
+/* HOVER */
+
+
+.card:hover {
+    box-shadow: 0 0 5px black;
+}
+.card:hover .social-card {
+    right: 0;
+    transition: 0.5s ease;
+}
+.card:hover .price-card {
+    height: 90px;
+    transition: 0.2s ease;
+}
+.card:hover .img-card:after {
+    transition: 0.4s ease;
+    top: -120%;
+    left: -60%;
+}
+.card:hover .img-card img {
+    left: 0;
+    transition: 0.5s ease;
+}
+.social-card i:hover {
+    color: rgba(0, 0, 0, 0.600);
+}
+.color-card button:hover {
+    box-shadow:  0 0 8px #000;
+   
+}
+.price-card a:hover {
+    background-color: rgb(171, 171, 243, 0.6);
+    border: 2px solid transparent;
+    transition: 0.2s ease;
+
+}
+.price-card i:hover {
+    background-color: rgb(171, 171, 243);
+    border: 2px solid transparent;
+    transition: 0.2s ease;
+}
